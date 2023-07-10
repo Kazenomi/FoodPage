@@ -4,11 +4,6 @@ include 'components/connect.php';
 
 session_start();
 
-if(isset($_SESSION['user_id'])){
-   $user_id = $_SESSION['user_id'];
-}else{
-   $user_id = '';
-};
 
 if(isset($_POST['submit'])){
 
@@ -23,7 +18,7 @@ if(isset($_POST['submit'])){
 
    if($select_user->rowCount() > 0){
       $_SESSION['user_id'] = $row['id'];
-      header('location:index.php');
+      header('location: index.php');
    }else{
       $message[] = 'incorrect username or password!';
    }
