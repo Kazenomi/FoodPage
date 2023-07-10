@@ -8,7 +8,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-   header('location:index.php');
+   header('location: index.php');
 };
 
 ?>
@@ -36,7 +36,7 @@ if(isset($_SESSION['user_id'])){
 
 <div class="heading">
    <h3>orders</h3>
-   <p><a href="html.php">home</a> <span> / orders</span></p>
+   <p><a href="index.php">home</a> <span> / orders</span></p>
 </div>
 
 <section class="orders">
